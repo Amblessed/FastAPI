@@ -1,0 +1,7 @@
+**********Features**********
+
+1. Automatic Documentation: swagger and redoc
+2. Standard python3
+3. Security and authentication
+4. Dependency injection 
+5. Testing - 100% coverage
