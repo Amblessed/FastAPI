@@ -13,7 +13,7 @@ Starting the app: uvicorn main:app --reload
 **** Get method overview ****
 Path parameters  @app.get("/blog/{id}")
 Predefined values
-Query paramters
+Query parameters
 
 
 *** Operation description overview ***
@@ -30,3 +30,10 @@ It is used to structure the Documentation in a very nice way
 Info regarding operation
 
 *** Response Description ****
+Describes what the response represents
+
+
+*** Routers ***
+They allow us to split our application into multiple files and operations
+Share a prefix between multiple operations
+Share tags

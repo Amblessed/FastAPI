@@ -3,7 +3,7 @@ from fastapi import FastAPI, status, Response
 
 app = FastAPI()               #Instantiate an object of the FastAPI class
 
-@app.get("/")
+@app.get("/hello")
 def index():
     return {"message":"Hello World!"}
 
@@ -13,7 +13,6 @@ def index():
         description="This api call stimulates fetching all blogs", 
         response_description= "List of all available blogs") 
 def get_all_blogs(page: int = 1, page_size: int | None = None):     # page_size is an optional parameter
-    """This api call stimulates fetching all blogs"""
     return {"message": f"All {page_size} blogs on page {page}"}
 
 
