@@ -5,3 +5,9 @@
 3. Security and authentication
 4. Dependency injection 
 5. Testing - 100% coverage
+
+
+**** Get method overview ****
+Path parameters  @app.get("/blog/{id}")
+Predefined values
+Query paramters
