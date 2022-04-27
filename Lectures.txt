@@ -1,3 +1,6 @@
+Starting the app: uvicorn main:app --reload
+
+
 **********Features**********
 
 1. Automatic Documentation: swagger and redoc
@@ -11,3 +14,19 @@
 Path parameters  @app.get("/blog/{id}")
 Predefined values
 Query paramters
+
+
+*** Operation description overview ***
+-- Status Code: This indicates the whether a request is successful or not
+-- Tags 
+-- Summary and description
+-- Response description
+
+
+Tags allows us tp cateorize opertions. Can provide multiple categories 
+It is used to structure the Documentation in a very nice way
+
+*** Summary and Description ***
+Info regarding operation
+
+*** Response Description ****
