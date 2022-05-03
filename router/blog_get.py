@@ -1,5 +1,7 @@
-from fastapi import APIRouter, status, Response
+from fastapi import APIRouter, Depends, status, Response
 from enum import Enum
+
+from router.blog_post import required_functionality
 
 
 router = APIRouter(prefix="/blog", tags=["Blog"])
@@ -10,8 +12,8 @@ router = APIRouter(prefix="/blog", tags=["Blog"])
          description="This api call stimulates fetching all blogs",
          response_description="List of all available blogs")
 # page_size is an optional parameter
-def get_all_blogs(page: int = 1, page_size: int | None = None):
-    return {"message": f"All {page_size} blogs on page {page}"}
+def get_all_blogs(page: int = 1, page_size: int | None = None, req_parameter: dict = Depends(required_functionality)):
+    return {"message": f"All {page_size} blogs on page {page}", "required": req_parameter}
 
 
 @router.get("/{id}/comment/{comment_id}", tags=["Comment"], summary="Retrieves a Comment")
